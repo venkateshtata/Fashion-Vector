@@ -36,7 +36,7 @@ Note : Please make sure both the ZooKeeper and Kafka Broker services are both ru
   * `python3 consumer.py` 
 * The `producer.py` file (the producer app) in the same directory uses kafka-python to publish a payload with the image(as byte-string) passed as command-line argument to the `send_image` topic within the cluster :
   * `python3 producer.py path/to/image`
-* Any app that is subscribed to the `kaftka-app/get_predictions` topic would be recieving the inference predictions. To test it, run the following script : 
+* Any app that is subscribed to the `kaftka-app/get_predictions.py` topic would be recieving the inference predictions. To test it, run the following script : 
   * `python3 get_predictions` 
 
 #### Topics Overview
