@@ -8,6 +8,8 @@
 
 This repository implements pipeline for deploying a CNN trained on Fashion-MNIST dataset, into a distributed event streaming pipeline configured using Apache Kafta.
 
+
+
 ### Pre-requisites
 
 The two main requisites for running this pipeline in your local system are Apache-Kafka and TorchServe :
@@ -26,6 +28,6 @@ The two main requisites for running this pipeline in your local system are Apach
   * First you need `cd` into Inference_Server directory, and run the below command to start the Model-Server.
   * `torchserve --start --model-store model_store --models fashion=model_store/fashion.mar`
 
-### Starting Kafka Cluster
+### Interacting with the Model through Kafka Cluster
 
 * 
