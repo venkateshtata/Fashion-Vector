@@ -1,4 +1,4 @@
-# Vector fashion
+# Vector Fashion
 
 ## Current Architecture
 
