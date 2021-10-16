@@ -30,4 +30,10 @@ The two main requisites for running this pipeline in your local system are Apach
 
 ### Interacting with the Model through Kafka Cluster
 
-* 
+Note : Please make sure both the ZooKeeper and Kafka Broker services are both running before proceeding with below commands.
+
+* Start subscribing by running `consumer.py` script in the kafka-app directory. It subcribes to the topic which recieves images from producer apps and publishes the predictions on `get_predictions` topic :
+  * `python3 consumer.py` 
+* The `producer.py` file (the producer app) in the same directory uses kafka-python to publish a payload with the image(as byte-string) passed as command-line argument to the `send_image` topic within the cluster :
+  * `python3 producer.py path/to/image`
+* Any app that is subscribed to the `get_predictions` topic would be recieving the inference predictions.
