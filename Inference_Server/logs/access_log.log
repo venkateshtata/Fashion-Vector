@@ -1,0 +1,7 @@
+2021-10-16 20:46:42,254 - /127.0.0.1:46362 "GET /predictions/fashion HTTP/1.1" 200 19
+2021-10-16 20:47:14,632 - /127.0.0.1:46376 "GET /predictions/fashion HTTP/1.1" 200 18
+2021-10-16 21:03:05,452 - /127.0.0.1:46468 "GET /predictions/fashion HTTP/1.1" 200 12
+2021-10-16 21:03:22,039 - /127.0.0.1:46474 "GET /predictions/fashion HTTP/1.1" 200 9
+2021-10-16 21:07:21,971 - /127.0.0.1:46502 "GET /predictions/fashion HTTP/1.1" 200 12
+2021-10-16 21:09:27,273 - /127.0.0.1:46518 "GET /predictions/fashion HTTP/1.1" 200 8
+2021-10-16 21:10:21,717 - /127.0.0.1:46534 "GET /predictions/fashion HTTP/1.1" 200 11

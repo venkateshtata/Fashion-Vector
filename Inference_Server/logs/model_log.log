@@ -1,0 +1,19 @@
+2021-10-16 20:39:28,794 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Listening on port: /tmp/.ts.sock.9000
+2021-10-16 20:39:28,795 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - [PID]26932
+2021-10-16 20:39:28,795 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Torch worker started.
+2021-10-16 20:39:28,795 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Python runtime: 3.8.12
+2021-10-16 20:39:28,806 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Connection accepted: /tmp/.ts.sock.9000.
+2021-10-16 20:39:28,827 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - model_name: fashion, batchSize: 1
+2021-10-16 20:45:57,528 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Listening on port: /tmp/.ts.sock.9000
+2021-10-16 20:45:57,529 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - [PID]27301
+2021-10-16 20:45:57,529 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Torch worker started.
+2021-10-16 20:45:57,529 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Python runtime: 3.8.12
+2021-10-16 20:45:57,540 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Connection accepted: /tmp/.ts.sock.9000.
+2021-10-16 20:45:57,562 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - model_name: fashion, batchSize: 1
+2021-10-16 20:46:24,746 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Listening on port: /tmp/.ts.sock.9000
+2021-10-16 20:46:24,746 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - [PID]27390
+2021-10-16 20:46:24,746 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Torch worker started.
+2021-10-16 20:46:24,746 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Python runtime: 3.8.12
+2021-10-16 20:46:24,755 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Connection accepted: /tmp/.ts.sock.9000.
+2021-10-16 20:46:24,776 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - model_name: fashion, batchSize: 1
+2021-10-16 20:46:26,906 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Missing the index_to_name.json file. Inference output will not include class name.
