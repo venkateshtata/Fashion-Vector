@@ -2,7 +2,7 @@
 
 ## Current Architecture
 
-![Pipeline 0.1](https://github.com/venkateshtata/Fashion-Vector/blob/main/model_architecture.png)
+![Pipeline 0.1](https://github.com/venkateshtata/Fashion-Vector/blob/main/model.png)
 
 ### Description
 
