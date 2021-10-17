@@ -27,6 +27,7 @@ The two main requisites for running this pipeline in your local system are Apach
 *  Testing the Model Server with Inference Endpoint :
   * First you need `cd` into Inference_Server directory, and run the below command to start the Model-Server.
   * `torchserve --start --model-store model_store --models fashion=model_store/fashion.mar`
+  * Then run `python3 test-model-server.py path/to/mnist-fashion-test-image` for getting predictions over HTTP from TorchServe.
 
 ### Interacting with the Model through Kafka Cluster
 
