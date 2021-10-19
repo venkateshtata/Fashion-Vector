@@ -1,13 +1,6 @@
 # Vector Fashion
 
-## Current Architecture
-
-![Pipeline 0.1](https://github.com/venkateshtata/Fashion-Vector/blob/main/model.png)
-
-### Description
-
-This repository implements pipeline for deploying a CNN trained on Fashion-MNIST dataset, into a distributed event streaming pipeline configured using Apache Kafta.
-
+Vectorai is a library that can be used to communicate with Apache Kafka Cluster or the Google Cloud Pub/Sub Cluster to publish images and subscribe to predictions.
 
 
 ### Pre-requisites
