@@ -1,0 +1,29 @@
+2021-10-19 12:30:00,215 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Listening on port: /tmp/.ts.sock.9000
+2021-10-19 12:30:00,215 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - [PID]5602
+2021-10-19 12:30:00,215 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Torch worker started.
+2021-10-19 12:30:00,215 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Python runtime: 3.8.12
+2021-10-19 12:30:00,230 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Connection accepted: /tmp/.ts.sock.9000.
+2021-10-19 12:30:00,250 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - model_name: fashion, batchSize: 1
+2021-10-19 12:30:05,751 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Missing the index_to_name.json file. Inference output will not include class name.
+2021-10-19 14:24:54,409 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Invoking custom service failed.
+2021-10-19 14:24:54,409 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Traceback (most recent call last):
+2021-10-19 14:24:54,409 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/home/venkatesh/.local/lib/python3.8/site-packages/ts/service.py", line 100, in predict
+2021-10-19 14:24:54,409 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     ret = self._entry_point(input_batch, self.context)
+2021-10-19 14:24:54,409 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/home/venkatesh/.local/lib/python3.8/site-packages/ts/torch_handler/base_handler.py", line 197, in handle
+2021-10-19 14:24:54,410 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     data_preprocess = self.preprocess(data)
+2021-10-19 14:24:54,410 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/home/venkatesh/.local/lib/python3.8/site-packages/ts/torch_handler/vision_handler.py", line 45, in preprocess
+2021-10-19 14:24:54,410 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     image = Image.open(io.BytesIO(image))
+2021-10-19 14:24:54,410 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/home/venkatesh/.local/lib/python3.8/site-packages/PIL/Image.py", line 3023, in open
+2021-10-19 14:24:54,410 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     raise UnidentifiedImageError(
+2021-10-19 14:24:54,410 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7f1faf5a88b0>
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Invoking custom service failed.
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - Traceback (most recent call last):
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/home/venkatesh/.local/lib/python3.8/site-packages/ts/service.py", line 100, in predict
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     ret = self._entry_point(input_batch, self.context)
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/home/venkatesh/.local/lib/python3.8/site-packages/ts/torch_handler/base_handler.py", line 197, in handle
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     data_preprocess = self.preprocess(data)
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/home/venkatesh/.local/lib/python3.8/site-packages/ts/torch_handler/vision_handler.py", line 41, in preprocess
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     image = base64.b64decode(image)
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -   File "/usr/lib/python3.8/base64.py", line 87, in b64decode
+2021-10-19 14:26:04,151 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG -     return binascii.a2b_base64(s)
+2021-10-19 14:26:04,152 [INFO ] W-9000-fashion_1.0-stdout MODEL_LOG - binascii.Error: Incorrect padding
