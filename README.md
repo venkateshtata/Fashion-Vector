@@ -84,7 +84,7 @@ trail = Unified("ps") # set it to "ps" for using Google Pub/Sub and "kafka" to u
 trail.consume(google_config) # change the config according to the service you want to use
 
 ```
-* Example for publishing to Cloud Pub/Sub using vectorai :
+* Example for publishing to a topic on Cloud Pub/Sub using vectorai :
 ```
 from vectorai import Unified
 
