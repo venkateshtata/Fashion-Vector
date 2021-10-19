@@ -1,7 +1,5 @@
 from vectorai import Unified
 
-trail = Unified("ps")
-
 kafka_config = {
 	'bootstrap_servers': ['localhost:9092'],
 	'topic': 'send_image',
@@ -21,5 +19,5 @@ google_config = {
 }
 
 
-
-trail.consume(google_config)
+trail = Unified("ps") # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka
+trail.consume(google_config) # change the config according to the service you want to use

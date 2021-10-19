@@ -12,4 +12,4 @@ config = {
 }
 
 
-trail.get_predictions(config)
+trail.get_predictions(config) 
