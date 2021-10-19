@@ -2,7 +2,7 @@
 
 ## Current Architecture
 
-![Pipeline 0.1](https://github.com/venkateshtata/Fashion-Vector/blob/main/model_arch.png)
+![Pipeline 0.1](https://github.com/venkateshtata/Fashion-Vector/blob/main/model.png)
 
 ### Description
 
@@ -21,18 +21,19 @@ The two main requisites for running this pipeline in your local system are Apach
 
 ### Testing Model Server
 
-* The trained model is 93% accurate in classifying 10 different classes of Fasion-MNIST dataset, and the trained weights can be found in the root of this repo, where `weights.pt` is trained model inference with both model-architecture and weights included in it, whereas `best.pth` contains just the trained weights.
+* The trained model is 93% accurate in classifying 10 different classes of Fashion-MNIST dataset, and the trained weights can be found in the root of this repo, where `weights.pt` is trained model inference with both model-architecture and weights included in it, whereas `best.pth` contains just the trained weights.
 * Testing the model using the weight file :
-  * `python3 test_model.py 4 (where x is an index of image within the test dataset, change for testing with different image)`
+  * `python3 test_model.py 4 (where 4 is an index of image within the test dataset, change for testing with different image)`
 *  Testing the Model Server with Inference Endpoint :
   * First you need `cd` into Inference_Server directory, and run the below command to start the Model-Server.
   * `torchserve --start --model-store model_store --models fashion=model_store/fashion.mar`
+  * Then run `python3 test-model-server.py path/to/mnist-fashion-test-image` for getting predictions over HTTP from TorchServe.
 
 ### Interacting with the Model through Kafka Cluster
 
 Note : Please make sure both the ZooKeeper and Kafka Broker services are both running before proceeding with below commands.
 
-* Start subscribing by running `consumer.py` script in the kafka-app directory. It subcribes to the topic which recieves images from producer apps and publishes the predictions on `get_predictions` topic :
+* Start subscribing by running `consumer.py` script in the kafka-app directory. It subcribes to the topic which receives images from producer apps and publishes the predictions on `get_predictions` topic :
   * `python3 consumer.py` 
 * The `producer.py` file (the producer app) in the same directory uses kafka-python to publish a payload with the image(as byte-string) passed as command-line argument to the `send_image` topic within the cluster :
   * `python3 producer.py path/to/image`
