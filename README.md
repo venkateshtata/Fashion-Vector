@@ -100,7 +100,3 @@ trail = Unified("ps") # set it to "ps" for using Google Pub/Sub and "kafka" to u
 trail.produce(google_config, image_path) # change the config according to the service you want to use
 
 ```
-
-#### Topics Overview
-- **/send_image** - Topic for publishing images.
-- **/get_predictions** - Topic for getting predictions.
