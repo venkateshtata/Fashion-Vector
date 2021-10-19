@@ -7,7 +7,6 @@ import sys
 import requests
 import torch
 from google.cloud import pubsub_v1
-from google.cloud import pubsub_v1
 
 # For using the Google Pub/Sub you need to export GOOGLE_APPLICATION_CREDENTIALS= path/to/api-key.json file.
 
