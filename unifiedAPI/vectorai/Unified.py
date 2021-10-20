@@ -8,7 +8,7 @@ import requests
 import torch
 from google.cloud import pubsub_v1
 
-# For using the Google Pub/Sub you need to export GOOGLE_APPLICATION_CREDENTIALS= path/to/api-key.json file.
+# For using the Google Pub/Sub you need to export GOOGLE_APPLICATION_CREDENTIALS=path/to/api-key.json file.
 
 class Unified():
 
@@ -136,7 +136,7 @@ class Unified():
 				img_data = json.loads(msg.value)['image']
 				url = config['model_server']
 
-				# Make the request
+				# Get Prediction from Model Server
 				response = requests.request("GET", url, headers=headers, data=img_data)
 				prediction = self.output_label(int(response.text))
 				print(prediction)
