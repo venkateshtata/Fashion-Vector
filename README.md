@@ -27,7 +27,7 @@ The two main requisites for running this pipeline in your local system are Apach
 
 Note : Please make sure both the ZooKeeper and Kafka Broker services are both running before proceeding with below commands.
 
-* In order for using the Unified class methods from vectorai module, the config object has to be created with required properties as required by Kafka or Cloud Pub/Sub, according which you want to communicate with.
+* In order for using the Unified class methods from vectorai, the config object has to be created with required properties as required by Kafka or Cloud Pub/Sub, according which you want to communicate with.
 *  Below is an example for listening to a topic on Kafka Cluster :
 
 ```
