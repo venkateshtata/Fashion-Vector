@@ -107,13 +107,15 @@ class Unified():
 		subscriber_client.close()
 
 
-
+	# Partition Selection Feature must be added for Kafka 
 	def produce(self, config, img_path) -> None:
 		if(self.broker_type == "kafka"):
 			producer = KafkaProducer(bootstrap_servers=config['bootstrap_servers'], value_serializer=self.json_serializer)
 			img_str = self.get_img_str(img_path)
 			img_payload = {"image": img_str}
 			producer.send(config['topic'], img_payload)
+
+			#block until all async messages are sent
 			producer.flush()
 			print("Published data to {}".format(config['topic']))
 
@@ -143,6 +145,8 @@ class Unified():
 
 				producer = KafkaProducer(bootstrap_servers=config['bootstrap_servers'], value_serializer=self.json_serializer)
 				producer.send(config['predictions_topic'], prediction)
+
+				#block until all async messages are sent
 				producer.flush()
 
 		if(self.broker_type == "ps"):
