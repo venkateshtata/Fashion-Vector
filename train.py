@@ -30,16 +30,20 @@ class FashionCNN(nn.Module):
         super(FashionCNN, self).__init__()
         
         self.layer1 = nn.Sequential(
+            # First Convulation layer : input: 28 * 28 * 3, output: 28 * 28 * 32
             nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, padding=1),
             nn.BatchNorm2d(32),
             nn.ReLU(),
+            #First Max Pooling layer : input: 28 * 28 * 32, output: 14 * 14 * 32
             nn.MaxPool2d(kernel_size=2, stride=2)
         )
         
         self.layer2 = nn.Sequential(
+            # Second Conv layer : input : 14 * 14 * 32, output: 12 * 12 * 64
             nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3),
             nn.BatchNorm2d(64),
             nn.ReLU(),
+            # Second Max Pooling layer : 12 * 12 * 64, output: 6 * 6 * 64
             nn.MaxPool2d(2)
         )
         
@@ -71,6 +75,7 @@ print(model)
 
 num_epochs = 5
 count = 0
+
 # Lists for visualization of loss and accuracy 
 loss_list = []
 iteration_list = []
