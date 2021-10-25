@@ -1,4 +1,4 @@
-from vectorai import Unified
+from vectorai import Client
 
 kafka_config = {
 	'bootstrap_servers': ['localhost:9092'],
@@ -14,5 +14,6 @@ google_config = {
 image_path = "/home/venkatesh/Desktop/vector_assignment/inference_test_images/test_image2.jpeg"
 
 
-trail = Unified("ps") # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka
-trail.produce(google_config, image_path) # change the config according to the service you want to use
+trail = Client("kafka", kafka_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka mand change the config according to the service you want to use
+
+trail.produce(image_path)

@@ -1,4 +1,4 @@
-from vectorai import Unified
+from vectorai import Client
 
 kafka_config = {
 	'bootstrap_servers': ['localhost:9092'],
@@ -19,5 +19,6 @@ google_config = {
 }
 
 
-trail = Unified("ps") # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka
-trail.consume(google_config) # change the config according to the service you want to use
+trail = Client("kafka", kafka_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka and change the config according to the service you want to use
+
+trail.consume()
