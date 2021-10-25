@@ -28,10 +28,10 @@ The two main requisites for running this pipeline in your local system are Apach
 Note : Please make sure both the ZooKeeper and Kafka Broker services are both running before proceeding with below commands.
 
 * In order for using the Unified class methods from vectorai, the config object has to be created with required properties as required by Kafka or Cloud Pub/Sub, according which you want to communicate with.
-*  Below is an example for listening to a topic on Kafka Cluster :
+*  Consumer Example :
 
 ```
-from vectorai import Unified
+from vectorai import Client
 
 kafka_config = {
 	'bootstrap_servers': ['localhost:9092'],
@@ -41,31 +41,6 @@ kafka_config = {
 	'predictions_topic': 'get_predictions',
 	'pred_group_id': 'pred_group'
 }
-
-trail = Unified("kafka") # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka
-trail.consume(kafka_config) # change the config according to the service you want to use
-
-```
-
-* Example for publishing to a topic on Kafka Cluster  :
-```
-from vectorai import Unified
-
-kafka_config = {
-	'bootstrap_servers': ['localhost:9092'],
-	'topic': 'send_image',
-	'group_id': 'consumer-group-a'
-}
-
-image_path = "path/to/image"
-
-trail = Unified("kafka") # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka
-trail.produce(kafka_config, image_path) # change the config according to the service you want to use
-
-```
-* Example for subscribing to Cloud Pub/Sub using vectorai :
-```
-from vectorai import Unified
 
 google_config = {
 	'google_project_id': 'vectorai-329503',
@@ -77,23 +52,32 @@ google_config = {
 }
 
 
-trail = Unified("ps") # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka
-trail.consume(google_config) # change the config according to the service you want to use
+trail = Client("kafka", kafka_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka and change the config according to the service you want to use
+
+trail.consume()
 
 ```
-* Example for publishing to a topic on Cloud Pub/Sub using vectorai :
+
+* Producer Example  :
 ```
-from vectorai import Unified
+from vectorai import Client
+
+kafka_config = {
+	'bootstrap_servers': ['localhost:9092'],
+	'topic': 'send_image',
+	'group_id': 'consumer-group-a'
+}
 
 google_config = {
 	'google_project_id': 'vectorai-329503',
 	'google_topic_id': 'fashion'
 }
 
-image_path = "path/to/image"
+image_path = "/home/venkatesh/Desktop/vector_assignment/inference_test_images/test_image2.jpeg"
 
 
-trail = Unified("ps") # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka
-trail.produce(google_config, image_path) # change the config according to the service you want to use
+trail = Client("kafka", kafka_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka mand change the config according to the service you want to use
 
+trail.produce(image_path)
 ```
+
