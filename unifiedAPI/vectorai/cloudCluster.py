@@ -1,7 +1,7 @@
 from .utils import Utils
 from .modelServe import ModelServe
-from google.cloud import pubsub_v1
 from .clientInterface import ClusterOperations
+from google.cloud import pubsub_v1
 
 class CloudCluster(ClusterOperations):
 

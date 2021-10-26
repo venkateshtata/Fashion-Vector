@@ -1,13 +1,13 @@
-from vectorai import Client
+from vectorai import Kafka, Cloud
 
-kafka_config = {
-	'bootstrap_servers': ['localhost:9092'],
-	'topic': 'send_image',
-	'model_server': 'http://127.0.0.1:8080/predictions/fashion',
-	'group_id': 'consumer-group-a',
-	'predictions_topic': 'get_predictions',
-	'pred_group_id': 'pred_group'
-}
+# kafka_config = {
+# 	'bootstrap_servers': ['localhost:9092'],
+# 	'topic': 'send_image',
+# 	'model_server': 'http://127.0.0.1:8080/predictions/fashion',
+# 	'group_id': 'consumer-group-a',
+# 	'predictions_topic': 'get_predictions',
+# 	'pred_group_id': 'pred_group'
+# }
 
 google_config = {
 	'google_project_id': 'vectorai-329503',
@@ -19,6 +19,6 @@ google_config = {
 }
 
 
-trail = Client("kafka", kafka_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka and change the config according to the service you want to use
+client = Cloud(google_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka and change the config according to the service you want to use
 
-trail.consume()
+client.consume_data()

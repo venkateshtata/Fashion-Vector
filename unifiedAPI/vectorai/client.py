@@ -4,31 +4,43 @@ import time
 from .utils import Utils
 from .cloudCluster import CloudCluster
 from .kafkaCluster import KafkaCluster
+from abc import ABC, abstractmethod
 
 
-class Client():
+class Consume(ABC):
+	@abstractmethod
+	def consume_data(self):
+		pass
 
-	def __init__(self, broker_type, config):
-		self.broker_type = broker_type
+
+class Produce(ABC):
+	@abstractmethod
+	def produce_data(self):
+		pass
+
+
+
+class Kafka(Consume, Produce):
+	def __init__(self, config):
 		self.config = config
 
-	def consume(self):
+	def produce_data(self, img_data):
+		cluster = KafkaCluster(self.config)
+		cluster.produce(img_data)
 
-		if(self.broker_type=="kafka"):
-			cluster = KafkaCluster(self.config)
-			cluster.consume()
-		elif(self.broker_type=="ps"):
-			cluster = CloudCluster(self.config)
-			cluster.consume()
-
-	def produce(self, img_path):
-
-		if(self.broker_type=="kafka"):
-			cluster = KafkaCluster(self.config)
-			cluster.produce(img_path)
-		elif(self.broker_type=="ps"):
-			cluster = CloudCluster(self.config)
-			cluster.produce(img_path)
+	def consume_data(self):
+		cluster = KafkaCluster(self.config)
+		cluster.consume()
 
 
+class Cloud(Consume, Produce):
+	def __init__(self, config):
+		self.config = config
 
+	def produce_data(self, img_data):
+		cluster = CloudCluster(self.config)
+		cluster.produce(img_data)
+
+	def consume_data(self):
+		cluster = CloudCluster(self.config)
+		cluster.consume()
