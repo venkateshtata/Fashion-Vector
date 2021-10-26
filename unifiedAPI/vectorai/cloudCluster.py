@@ -1,6 +1,6 @@
 from .utils import Utils
 from .modelServe import ModelServe
-from .clientInterface import ClusterOperations
+from .clusterInterface import ClusterOperations
 from google.cloud import pubsub_v1
 
 class CloudCluster(ClusterOperations):

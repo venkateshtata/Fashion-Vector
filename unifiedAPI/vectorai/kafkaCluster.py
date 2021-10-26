@@ -3,7 +3,7 @@ from .modelServe import ModelServe
 from kafka import KafkaProducer
 from kafka import KafkaConsumer
 import json
-from .clientInterface import ClusterOperations
+from .clusterInterface import ClusterOperations
 
 
 class KafkaCluster(ClusterOperations):
