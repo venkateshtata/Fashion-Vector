@@ -31,7 +31,7 @@ Note : Please make sure both the ZooKeeper and Kafka Broker services are both ru
 *  Consumer Example :
 
 ```
-from vectorai import Kafka, Cloud
+from vectorai import KafkaConnect, CloudConnect
 
 kafka_config = {
 	'bootstrap_servers': ['localhost:9092'],
@@ -51,8 +51,8 @@ google_config = {
 	'google_predictions_topic_id': 'get_fashion_predictions'
 }
 
-# client = Kafka(kafka_config)
-client = Cloud(google_config)
+# client = KafkaConnect(kafka_config)
+client = CloudConnect(google_config)
 
 client.consume_data()
 
@@ -62,7 +62,7 @@ client.consume_data()
 
 * Producer Example  :
 ```
-from vectorai import Kafka, Cloud
+from vectorai import KafkaConnect, CloudConnect
 
 kafka_config = {
 	'bootstrap_servers': ['localhost:9092'],
@@ -78,8 +78,8 @@ google_config = {
 image_path = "/home/venkatesh/Desktop/vector_assignment/inference_test_images/test_image2.jpeg"
 
 
-# client = Kafka(kafka_config)
-client = Cloud(google_config)
+# client = KafkaConnect(kafka_config)
+client = CloudConnect(google_config)
 
 client.produce_data(image_path)
 ```
