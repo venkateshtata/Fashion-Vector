@@ -1,4 +1,4 @@
-from vectorai import Kafka, Cloud
+from vectorai import KafkaConnect, CloudConnect
 
 # kafka_config = {
 # 	'bootstrap_servers': ['localhost:9092'],
@@ -19,6 +19,6 @@ google_config = {
 }
 
 
-client = Cloud(google_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka and change the config according to the service you want to use
+client = CloudConnect(google_config)
 
 client.consume_data()

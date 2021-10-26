@@ -1,1 +1,1 @@
-from .client import Kafka, Cloud
+from .client import KafkaConnect, CloudConnect

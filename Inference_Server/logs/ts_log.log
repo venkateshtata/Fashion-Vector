@@ -114,3 +114,281 @@ Model config: N/A
 2021-10-19 15:21:57,199 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 97888, Backend time ns: 1788649
 2021-10-19 15:22:02,093 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2
 2021-10-19 15:22:02,093 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 62045, Backend time ns: 1702613
+2021-10-25 08:36:11,113 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager -  Loading snapshot serializer plugin...
+2021-10-25 08:36:11,178 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager - Initializing plugins manager...
+2021-10-25 08:36:11,294 [INFO ] main org.pytorch.serve.ModelServer - 
+Torchserve version: 0.4.2
+TS Home: /home/venkatesh/.local/lib/python3.8/site-packages
+Current directory: /home/venkatesh/Desktop/vector_assignment/Inference_Server
+Temp directory: /tmp
+Number of GPUs: 1
+Number of CPUs: 8
+Max heap size: 3994 M
+Python executable: /usr/bin/python3.8
+Config file: logs/config/20211019122959832-startup.cfg
+Inference address: http://127.0.0.1:8080
+Management address: http://127.0.0.1:8081
+Metrics address: http://127.0.0.1:8082
+Model Store: /home/venkatesh/Desktop/vector_assignment/Inference_Server/model_store
+Initial Models: fashion=model_store/fashion.mar
+Log dir: /home/venkatesh/Desktop/vector_assignment/Inference_Server/logs
+Metrics dir: /home/venkatesh/Desktop/vector_assignment/Inference_Server/logs
+Netty threads: 0
+Netty client threads: 0
+Default workers per model: 1
+Blacklist Regex: N/A
+Maximum Response Size: 6553500
+Maximum Request Size: 6553500
+Prefer direct buffer: false
+Allowed Urls: [file://.*|http(s)?://.*]
+Custom python dependency for model allowed: false
+Metrics report format: prometheus
+Enable metrics API: true
+Workflow Store: /home/venkatesh/Desktop/vector_assignment/Inference_Server/model_store
+Model config: N/A
+2021-10-25 08:36:11,320 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Started restoring models from snapshot {
+  "name": "20211019122959832-startup.cfg",
+  "modelCount": 1,
+  "created": 1634626799833,
+  "models": {
+    "fashion": {
+      "1.0": {
+        "defaultVersion": true,
+        "marName": "fashion.mar",
+        "minWorkers": 1,
+        "maxWorkers": 1,
+        "batchSize": 1,
+        "maxBatchDelay": 100,
+        "responseTimeout": 120
+      }
+    }
+  }
+}
+2021-10-25 08:36:11,337 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Validating snapshot 20211019122959832-startup.cfg
+2021-10-25 08:36:11,338 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Snapshot 20211019122959832-startup.cfg validated successfully
+2021-10-25 08:36:11,463 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Adding new version 1.0 for model fashion
+2021-10-25 08:36:11,463 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model fashion
+2021-10-25 08:36:11,463 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model fashion
+2021-10-25 08:36:11,463 [INFO ] main org.pytorch.serve.wlm.ModelManager - Model fashion loaded.
+2021-10-25 08:36:11,463 [DEBUG] main org.pytorch.serve.wlm.ModelManager - updateModel: fashion, count: 1
+2021-10-25 08:36:11,477 [INFO ] main org.pytorch.serve.ModelServer - Initialize Inference server with: EpollServerSocketChannel.
+2021-10-25 08:36:11,554 [INFO ] main org.pytorch.serve.ModelServer - Inference API bind to: http://127.0.0.1:8080
+2021-10-25 08:36:11,554 [INFO ] main org.pytorch.serve.ModelServer - Initialize Management server with: EpollServerSocketChannel.
+2021-10-25 08:36:11,555 [INFO ] main org.pytorch.serve.ModelServer - Management API bind to: http://127.0.0.1:8081
+2021-10-25 08:36:11,555 [INFO ] main org.pytorch.serve.ModelServer - Initialize Metrics server with: EpollServerSocketChannel.
+2021-10-25 08:36:11,556 [INFO ] main org.pytorch.serve.ModelServer - Metrics API bind to: http://127.0.0.1:8082
+2021-10-25 08:36:11,749 [WARN ] pool-2-thread-1 org.pytorch.serve.metrics.MetricCollector - worker pid is not available yet.
+2021-10-25 08:36:11,935 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change null -> WORKER_STARTED
+2021-10-25 08:36:11,939 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9000
+2021-10-25 08:36:17,321 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 5356
+2021-10-25 08:36:17,321 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-10-25 08:36:22,941 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 64
+2021-10-25 08:36:22,948 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 118540, Backend time ns: 72171786
+2021-10-25 08:36:22,950 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 1
+2021-10-25 08:36:22,951 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 55692, Backend time ns: 2306289
+2021-10-25 08:36:28,570 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 1
+2021-10-25 08:36:28,571 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 69707, Backend time ns: 2482250
+2021-10-25 08:36:36,976 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 1
+2021-10-25 08:36:36,977 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 74118, Backend time ns: 2515811
+2021-10-25 08:40:10,496 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 5
+2021-10-25 08:40:10,496 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 95867, Backend time ns: 5268345
+2021-10-25 08:41:33,124 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 4
+2021-10-25 08:41:33,125 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 66154, Backend time ns: 4933852
+2021-10-25 08:41:51,203 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 7
+2021-10-25 08:41:51,203 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 101757, Backend time ns: 7862915
+2021-10-25 08:42:21,064 [INFO ] epollEventLoopGroup-2-1 org.pytorch.serve.ModelServer - Inference model server stopped.
+2021-10-25 08:42:21,065 [INFO ] epollEventLoopGroup-2-2 org.pytorch.serve.ModelServer - Management model server stopped.
+2021-10-25 08:42:21,065 [INFO ] epollEventLoopGroup-2-1 org.pytorch.serve.ModelServer - Metrics model server stopped.
+2021-10-25 08:42:23,088 [INFO ] main org.pytorch.serve.ModelServer - Torchserve stopped.
+2021-10-25 08:42:23,090 [INFO ] Thread-0 org.pytorch.serve.ModelServer - Unregistering model fashion version 1.0
+2021-10-25 08:42:23,090 [DEBUG] Thread-0 org.pytorch.serve.wlm.ModelVersionedRefs - Removed model: fashion version: 1.0
+2021-10-25 08:42:23,090 [DEBUG] Thread-0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change WORKER_MODEL_LOADED -> WORKER_SCALED_DOWN
+2021-10-25 08:42:23,090 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-fashion_1.0-stderr
+2021-10-25 08:42:23,090 [WARN ] Thread-0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-fashion_1.0-stdout
+2021-10-25 08:42:23,090 [INFO ] epollEventLoopGroup-5-1 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_SCALED_DOWN
+2021-10-25 08:42:23,090 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - System state is : WORKER_SCALED_DOWN
+2021-10-25 08:42:23,090 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Shutting down the thread .. Scaling down.
+2021-10-25 08:42:23,090 [INFO ] W-9000-fashion_1.0-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-fashion_1.0-stdout
+2021-10-25 08:42:23,091 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change WORKER_SCALED_DOWN -> WORKER_STOPPED
+2021-10-25 08:42:23,091 [WARN ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-fashion_1.0-stderr
+2021-10-25 08:42:23,091 [WARN ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-fashion_1.0-stdout
+2021-10-25 08:42:23,091 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Worker terminated due to scale-down call.
+2021-10-25 08:42:23,095 [INFO ] Thread-0 org.pytorch.serve.wlm.ModelManager - Model fashion unregistered.
+2021-10-25 19:19:40,162 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager -  Loading snapshot serializer plugin...
+2021-10-25 19:19:40,220 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager - Initializing plugins manager...
+2021-10-25 19:19:40,324 [INFO ] main org.pytorch.serve.ModelServer - 
+Torchserve version: 0.4.2
+TS Home: /home/venkatesh/.local/lib/python3.8/site-packages
+Current directory: /home/venkatesh/Desktop/vector_assignment/Inference_Server
+Temp directory: /tmp
+Number of GPUs: 1
+Number of CPUs: 8
+Max heap size: 3994 M
+Python executable: /usr/bin/python3.8
+Config file: logs/config/20211025084221065-shutdown.cfg
+Inference address: http://127.0.0.1:8080
+Management address: http://127.0.0.1:8081
+Metrics address: http://127.0.0.1:8082
+Model Store: /home/venkatesh/Desktop/vector_assignment/Inference_Server/model_store
+Initial Models: fashion=model_store/fashion.mar
+Log dir: /home/venkatesh/Desktop/vector_assignment/Inference_Server/logs
+Metrics dir: /home/venkatesh/Desktop/vector_assignment/Inference_Server/logs
+Netty threads: 0
+Netty client threads: 0
+Default workers per model: 1
+Blacklist Regex: N/A
+Maximum Response Size: 6553500
+Maximum Request Size: 6553500
+Prefer direct buffer: false
+Allowed Urls: [file://.*|http(s)?://.*]
+Custom python dependency for model allowed: false
+Metrics report format: prometheus
+Enable metrics API: true
+Workflow Store: /home/venkatesh/Desktop/vector_assignment/Inference_Server/model_store
+Model config: N/A
+2021-10-25 19:19:40,341 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Started restoring models from snapshot {
+  "name": "20211025084221065-shutdown.cfg",
+  "modelCount": 1,
+  "created": 1635131541065,
+  "models": {
+    "fashion": {
+      "1.0": {
+        "defaultVersion": true,
+        "marName": "fashion.mar",
+        "minWorkers": 1,
+        "maxWorkers": 1,
+        "batchSize": 1,
+        "maxBatchDelay": 100,
+        "responseTimeout": 120
+      }
+    }
+  }
+}
+2021-10-25 19:19:40,361 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Validating snapshot 20211025084221065-shutdown.cfg
+2021-10-25 19:19:40,363 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Snapshot 20211025084221065-shutdown.cfg validated successfully
+2021-10-25 19:19:40,496 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Adding new version 1.0 for model fashion
+2021-10-25 19:19:40,497 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model fashion
+2021-10-25 19:19:40,497 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model fashion
+2021-10-25 19:19:40,497 [INFO ] main org.pytorch.serve.wlm.ModelManager - Model fashion loaded.
+2021-10-25 19:19:40,497 [DEBUG] main org.pytorch.serve.wlm.ModelManager - updateModel: fashion, count: 1
+2021-10-25 19:19:40,511 [INFO ] main org.pytorch.serve.ModelServer - Initialize Inference server with: EpollServerSocketChannel.
+2021-10-25 19:19:40,596 [INFO ] main org.pytorch.serve.ModelServer - Inference API bind to: http://127.0.0.1:8080
+2021-10-25 19:19:40,596 [INFO ] main org.pytorch.serve.ModelServer - Initialize Management server with: EpollServerSocketChannel.
+2021-10-25 19:19:40,597 [INFO ] main org.pytorch.serve.ModelServer - Management API bind to: http://127.0.0.1:8081
+2021-10-25 19:19:40,597 [INFO ] main org.pytorch.serve.ModelServer - Initialize Metrics server with: EpollServerSocketChannel.
+2021-10-25 19:19:40,597 [INFO ] main org.pytorch.serve.ModelServer - Metrics API bind to: http://127.0.0.1:8082
+2021-10-25 19:19:41,070 [WARN ] pool-2-thread-1 org.pytorch.serve.metrics.MetricCollector - worker pid is not available yet.
+2021-10-25 19:19:42,266 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change null -> WORKER_STARTED
+2021-10-25 19:19:42,270 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9000
+2021-10-25 19:19:48,016 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 5720
+2021-10-25 19:19:48,017 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-10-25 19:23:40,774 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 65
+2021-10-25 19:23:40,775 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 134729, Backend time ns: 66171858
+2021-10-25 20:41:05,430 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 14
+2021-10-25 20:41:05,431 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 111905, Backend time ns: 14688503
+2021-10-25 20:41:05,638 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 3
+2021-10-25 20:41:05,639 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 105462, Backend time ns: 4620883
+2021-10-25 20:41:08,644 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 1
+2021-10-25 20:41:08,644 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 81546, Backend time ns: 2071522
+2021-10-25 20:42:49,736 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 16
+2021-10-25 20:42:49,737 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 94287, Backend time ns: 16628228
+2021-10-25 20:44:39,795 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 16
+2021-10-25 20:44:39,796 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 86618, Backend time ns: 16703955
+2021-10-25 20:44:39,944 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2
+2021-10-25 20:44:39,944 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 98473, Backend time ns: 3164893
+2021-10-25 20:57:17,945 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 13
+2021-10-25 20:57:17,945 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 92871, Backend time ns: 13263081
+2021-10-25 20:57:18,085 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2
+2021-10-25 20:57:18,086 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 119557, Backend time ns: 3629287
+2021-10-25 20:57:20,528 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 3
+2021-10-25 20:57:20,529 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 141288, Backend time ns: 4691351
+2021-10-25 20:57:47,961 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 5
+2021-10-25 20:57:47,962 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 65785, Backend time ns: 5600426
+2021-10-25 20:57:50,007 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 2
+2021-10-25 20:57:50,008 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 94963, Backend time ns: 3210585
+2021-10-25 21:07:00,744 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 4
+2021-10-25 21:07:00,745 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 117017, Backend time ns: 4649957
+2021-10-25 21:25:12,866 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 8
+2021-10-25 21:25:12,866 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 91586, Backend time ns: 8988655
+2021-10-25 21:38:32,684 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 5
+2021-10-25 21:38:32,685 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 88667, Backend time ns: 5975041
+2021-10-25 21:39:14,772 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 12
+2021-10-25 21:39:14,773 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 159236, Backend time ns: 14485961
+2021-10-26 09:29:10,620 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager -  Loading snapshot serializer plugin...
+2021-10-26 09:29:10,678 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager - Initializing plugins manager...
+2021-10-26 09:29:10,764 [INFO ] main org.pytorch.serve.ModelServer - 
+Torchserve version: 0.4.2
+TS Home: /home/venkatesh/.local/lib/python3.8/site-packages
+Current directory: /home/venkatesh/Desktop/vector_assignment/Inference_Server
+Temp directory: /tmp
+Number of GPUs: 1
+Number of CPUs: 8
+Max heap size: 3994 M
+Python executable: /usr/bin/python3.8
+Config file: logs/config/20211025191940597-startup.cfg
+Inference address: http://127.0.0.1:8080
+Management address: http://127.0.0.1:8081
+Metrics address: http://127.0.0.1:8082
+Model Store: /home/venkatesh/Desktop/vector_assignment/Inference_Server/model_store
+Initial Models: fashion=model_store/fashion.mar
+Log dir: /home/venkatesh/Desktop/vector_assignment/Inference_Server/logs
+Metrics dir: /home/venkatesh/Desktop/vector_assignment/Inference_Server/logs
+Netty threads: 0
+Netty client threads: 0
+Default workers per model: 1
+Blacklist Regex: N/A
+Maximum Response Size: 6553500
+Maximum Request Size: 6553500
+Prefer direct buffer: false
+Allowed Urls: [file://.*|http(s)?://.*]
+Custom python dependency for model allowed: false
+Metrics report format: prometheus
+Enable metrics API: true
+Workflow Store: /home/venkatesh/Desktop/vector_assignment/Inference_Server/model_store
+Model config: N/A
+2021-10-26 09:29:10,785 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Started restoring models from snapshot {
+  "name": "20211025191940597-startup.cfg",
+  "modelCount": 1,
+  "created": 1635169780598,
+  "models": {
+    "fashion": {
+      "1.0": {
+        "defaultVersion": true,
+        "marName": "fashion.mar",
+        "minWorkers": 1,
+        "maxWorkers": 1,
+        "batchSize": 1,
+        "maxBatchDelay": 100,
+        "responseTimeout": 120
+      }
+    }
+  }
+}
+2021-10-26 09:29:10,811 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Validating snapshot 20211025191940597-startup.cfg
+2021-10-26 09:29:10,814 [INFO ] main org.pytorch.serve.snapshot.SnapshotManager - Snapshot 20211025191940597-startup.cfg validated successfully
+2021-10-26 09:29:10,932 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Adding new version 1.0 for model fashion
+2021-10-26 09:29:10,932 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model fashion
+2021-10-26 09:29:10,933 [DEBUG] main org.pytorch.serve.wlm.ModelVersionedRefs - Setting default version to 1.0 for model fashion
+2021-10-26 09:29:10,933 [INFO ] main org.pytorch.serve.wlm.ModelManager - Model fashion loaded.
+2021-10-26 09:29:10,933 [DEBUG] main org.pytorch.serve.wlm.ModelManager - updateModel: fashion, count: 1
+2021-10-26 09:29:10,945 [INFO ] main org.pytorch.serve.ModelServer - Initialize Inference server with: EpollServerSocketChannel.
+2021-10-26 09:29:11,033 [INFO ] main org.pytorch.serve.ModelServer - Inference API bind to: http://127.0.0.1:8080
+2021-10-26 09:29:11,033 [INFO ] main org.pytorch.serve.ModelServer - Initialize Management server with: EpollServerSocketChannel.
+2021-10-26 09:29:11,034 [INFO ] main org.pytorch.serve.ModelServer - Management API bind to: http://127.0.0.1:8081
+2021-10-26 09:29:11,034 [INFO ] main org.pytorch.serve.ModelServer - Initialize Metrics server with: EpollServerSocketChannel.
+2021-10-26 09:29:11,035 [INFO ] main org.pytorch.serve.ModelServer - Metrics API bind to: http://127.0.0.1:8082
+2021-10-26 09:29:11,369 [WARN ] pool-2-thread-1 org.pytorch.serve.metrics.MetricCollector - worker pid is not available yet.
+2021-10-26 09:29:12,636 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change null -> WORKER_STARTED
+2021-10-26 09:29:12,640 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Connecting to: /tmp/.ts.sock.9000
+2021-10-26 09:29:18,139 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 5471
+2021-10-26 09:29:18,140 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - W-9000-fashion_1.0 State change WORKER_STARTED -> WORKER_MODEL_LOADED
+2021-10-26 09:31:22,511 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 62
+2021-10-26 09:31:22,512 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 180094, Backend time ns: 63976822
+2021-10-26 09:31:22,912 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 1
+2021-10-26 09:31:22,912 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 89731, Backend time ns: 2150931
+2021-10-26 09:34:17,198 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 4
+2021-10-26 09:34:17,199 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 64666, Backend time ns: 4782708
+2021-10-26 09:46:20,861 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 15
+2021-10-26 09:46:20,861 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 68009, Backend time ns: 15217490
+2021-10-26 11:18:25,155 [INFO ] W-9000-fashion_1.0 org.pytorch.serve.wlm.WorkerThread - Backend response time: 5
+2021-10-26 11:18:25,155 [DEBUG] W-9000-fashion_1.0 org.pytorch.serve.job.Job - Waiting time ns: 66754, Backend time ns: 5268794

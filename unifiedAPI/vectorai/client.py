@@ -20,7 +20,7 @@ class Produce(ABC):
 
 
 
-class Kafka(Consume, Produce):
+class KafkaConnect(Consume, Produce):
 	def __init__(self, config):
 		self.config = config
 
@@ -33,7 +33,7 @@ class Kafka(Consume, Produce):
 		cluster.consume()
 
 
-class Cloud(Consume, Produce):
+class CloudConnect(Consume, Produce):
 	def __init__(self, config):
 		self.config = config
 
