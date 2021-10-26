@@ -51,8 +51,8 @@ google_config = {
 	'google_predictions_topic_id': 'get_fashion_predictions'
 }
 
-
-client = Cloud(google_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka and change the config according to the service you want to use
+# client = Kafka(kafka_config)
+client = Cloud(google_config)
 
 client.consume_data()
 
@@ -78,7 +78,8 @@ google_config = {
 image_path = "/home/venkatesh/Desktop/vector_assignment/inference_test_images/test_image2.jpeg"
 
 
-client = Cloud(google_config) # set it to "ps" for using Google Pub/Sub and "kafka" to use Apache Kafka mand change the config according to the service you want to use
+# client = Kafka(kafka_config)
+client = Cloud(google_config)
 
 client.produce_data(image_path)
 ```
